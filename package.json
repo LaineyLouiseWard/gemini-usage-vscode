@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "publisher": "laineylouiseward",
   "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/LaineyLouiseWard/gemini-usage-vscode" },
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Other", "Visualization"],
   "keywords": ["gemini", "antigravity", "google", "usage", "limits"],
