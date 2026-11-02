@@ -43,6 +43,12 @@ uses none of your limits. It uses the `agy` on your PATH, then `~/.local/bin/agy
 
 It is plain JavaScript and runs as written. To package it, run `npx @vscode/vsce package`.
 
+## Related
+
+- [Clawd Usage for VS Code](https://github.com/LaineyLouiseWard/clawd-usage-vscode): Claude plan usage with Clawd the crab.
+- [ChatGPT Usage for VS Code](https://github.com/LaineyLouiseWard/chatgpt-usage-vscode): your ChatGPT plan's Codex limits.
+- [Clawd Usage for Linux](https://github.com/LaineyLouiseWard/clawd-usage-linux): Clawd as a desktop widget.
+
 ## Licence
 
 MIT. See [LICENSE](LICENSE).
