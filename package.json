@@ -1,0 +1,41 @@
+{
+  "name": "gemini-usage",
+  "displayName": "Gemini Usage",
+  "description": "Your Google AI plan's weekly Antigravity CLI limits in a small sidebar card.",
+  "version": "0.1.0",
+  "publisher": "laineylouiseward",
+  "license": "MIT",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other", "Visualization"],
+  "keywords": ["gemini", "antigravity", "google", "usage", "limits"],
+  "main": "./extension.js",
+  "activationEvents": ["onStartupFinished"],
+  "contributes": {
+    "views": {
+      "explorer": [
+        { "type": "webview", "id": "geminiUsage.view", "name": "Gemini Usage" }
+      ]
+    },
+    "commands": [
+      { "command": "geminiUsage.refresh", "title": "Refresh Usage", "category": "Gemini Usage", "icon": "$(refresh)" }
+    ],
+    "menus": {
+      "view/title": [
+        { "command": "geminiUsage.refresh", "when": "view == geminiUsage.view", "group": "navigation@1" }
+      ]
+    },
+    "configuration": {
+      "title": "Gemini Usage",
+      "properties": {
+        "geminiUsage.agyPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the agy program (Antigravity CLI). Empty: PATH, then ~/.local/bin."
+        },
+        "geminiUsage.refreshSeconds": { "type": "number", "default": 300, "minimum": 60, "description": "How often to read the limits (agy /usage, which calls no model)." },
+        "geminiUsage.warnPercent": { "type": "number", "default": 60, "description": "The Gemini number turns yellow from here." },
+        "geminiUsage.critPercent": { "type": "number", "default": 85, "description": "The Gemini number turns red from here." }
+      }
+    }
+  }
+}
